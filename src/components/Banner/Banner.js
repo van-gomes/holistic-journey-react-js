@@ -1,9 +1,9 @@
-import style from '../Banner/Banner.module.css';
+import styles from '../Banner/Banner.module.css';
 import banner from '../../assets/banner.jpg';
 
 export const Banner = () => {
     return (
-        <div className={style.banner}>
+        <div className={styles.banner}>
         <img src={banner} alt="banner" />
         </div>
     );
