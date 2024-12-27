@@ -4,7 +4,7 @@ import { DropdownList } from '../DropdownList';
 import { TextField } from '../TextField';
 import styles from './Formulario.module.css';
 
-export const Formulario = () => {
+export const Formulario = (props) => {
     const meditations = [
         'Sleep better',
         'Reduce stress or anxiety',
@@ -19,8 +19,14 @@ export const Formulario = () => {
     const [meditation, setMeditation] = useState('');
 
     const onSave = (evento) => {
-        evento.preventDefault()
-        console.log('Form foi submetido')
+        evento.preventDefault();
+        props.toRegisteredMeditation({
+            name,
+            description,
+            image,
+            meditation,
+        });
+        console.log('Salvando...', name, description, image, meditation);
     }
 
     return (
