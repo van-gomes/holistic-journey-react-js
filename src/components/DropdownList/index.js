@@ -4,11 +4,15 @@ export const DropdownList = (props) => {
   return (
     <div className={styles.lista_suspensa}>
       <label>{props.label}</label>
-      <select required={props.required}>
+      <select 
+        value={props.value}
+        onChange={evento => props.toChanged(evento.target.value)} 
+        required={props.required}
+      >
         {props.itens.map((item) => (
           <option key={item}>{item}</option>
         ))}
       </select>
     </div>
   );
-}
+};

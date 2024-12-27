@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Button } from '../Button';
 import { DropdownList } from '../DropdownList';
 import { TextField } from '../TextField';
@@ -12,6 +13,11 @@ export const Formulario = () => {
         'Something else',
     ];
 
+    const [name, setName] = useState('');
+    const [description, setDescription] = useState('');
+    const [image, setImage] = useState('');
+    const [meditation, setMeditation] = useState('');
+
     const onSave = (evento) => {
         evento.preventDefault()
         console.log('Form foi submetido')
@@ -21,10 +27,34 @@ export const Formulario = () => {
         <section className={styles.formulario}>
             <form onSubmit={onSave}>
                 <h2>Preencha os dados para criar o card do colaborador</h2>
-                <TextField label="Nome" placeholder="Digite seu nome" required />
-                <TextField label="Cargo" placeholder="Digite seu cargo" required />
-                <TextField label="Imagem" placeholder="Digite o endereço da imagem" required />
-                <DropdownList label="Meditations" itens={meditations} required />
+                <TextField 
+                    label="Nome"
+                    value={name}
+                    toChanged={value => setName(value)}
+                    placeholder="Digite seu nome" 
+                    required 
+                />
+                <TextField 
+                    label="Descrição" 
+                    value={description}
+                    toChanged={value => setDescription(value)}
+                    placeholder="Digite seu cargo" 
+                    required 
+                />
+                <TextField 
+                    label="Imagem" 
+                    value={image}
+                    toChanged={value => setImage(value)}
+                    placeholder="Digite o endereço da imagem" 
+                    required 
+                />
+                <DropdownList 
+                    label="Meditations"
+                    value={meditation}
+                    toChanged={value => setMeditation(value)}
+                    itens={meditations} 
+                    required 
+                />
                 <Button> Criar card </Button>
             </form>
         </section>
