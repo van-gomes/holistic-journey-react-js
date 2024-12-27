@@ -12,13 +12,18 @@ export const Formulario = () => {
         'Something else',
     ];
 
+    const onSave = (evento) => {
+        evento.preventDefault()
+        console.log('Form foi submetido')
+    }
+
     return (
         <section className={styles.formulario}>
-            <form>
+            <form onSubmit={onSave}>
                 <h2>Preencha os dados para criar o card do colaborador</h2>
-                <TextField label="Nome" placeholder="Digite seu nome" />
-                <TextField label="Cargo" placeholder="Digite seu cargo" />
-                <TextField label="Imagem" placeholder="Digite o endereço da imagem" />
+                <TextField label="Nome" placeholder="Digite seu nome" required />
+                <TextField label="Cargo" placeholder="Digite seu cargo" required />
+                <TextField label="Imagem" placeholder="Digite o endereço da imagem" required />
                 <DropdownList label="Meditations" itens={meditations} required />
                 <Button> Criar card </Button>
             </form>
