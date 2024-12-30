@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import Banner from './components/Banner';
 import { Formulario } from './components/Form';
+import { Meditations } from './components/Meditations';
 
 export const App = () => {
 
@@ -18,6 +19,7 @@ export const App = () => {
             <Formulario
                 toRegisteredMeditation={newMeditation => toNewTypeMeditationRegistered(newMeditation)}
             />
+            <Meditations />
         </div>
     );
 }

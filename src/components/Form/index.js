@@ -26,7 +26,6 @@ export const Formulario = (props) => {
             image,
             meditation,
         });
-        console.log('Salvando...', name, description, image, meditation);
     }
 
     return (
