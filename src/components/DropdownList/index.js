@@ -4,14 +4,16 @@ export const DropdownList = (props) => {
   return (
     <div className={styles.lista_suspensa}>
       <label>{props.label}</label>
-      <select 
+      <select
         value={props.value}
-        onChange={evento => props.toChanged(evento.target.value)} 
+        onChange={(evento) => props.toChanged(evento.target.value)}
         required={props.required}
       >
-        {props.itens.map((item) => (
-          <option key={item}>{item}</option>
-        ))}
+        {props.itens && props.itens.length > 0 ? (
+          props.itens.map((item) => <option key={item}>{item}</option>)
+        ) : (
+          <option disabled>Nenhum item disponível</option>
+        )}
       </select>
     </div>
   );

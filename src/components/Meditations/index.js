@@ -1,19 +1,20 @@
-import styles from './Meditations.module.css';
+import styles from "./Meditations.module.css";
 
 export const Meditations = (props) => {
-    return (
-        <section className={styles.meditation}>
-            <h2 className={styles.meditation__title}>Meditations</h2>
-            <ul className={styles.meditation__list}>
-                {props.meditations?.map(meditation => (
-                    <li key={meditation.id}>
-                        <h3>{meditation.name}</h3>
-                        <p>{meditation.description}</p>
-                        <img src={meditation.image} alt={meditation.name} />
-                        <p>{meditation.meditation}</p>
-                    </li>
-                ))}
-            </ul>
-        </section>
-    );
-}
+  return (
+    <section className={styles.meditations}>
+      <ul>
+        {props.meditation && props.meditation.length > 0 ? (
+          props.meditation.map((meditation, id) => (
+            <>
+              <li key={id}>{meditation}</li>
+              <h2>{meditation.name}</h2>
+            </>
+          ))
+        ) : (
+          <li>Nenhuma meditação disponível</li>
+        )}
+      </ul>
+    </section>
+  );
+};

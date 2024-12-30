@@ -5,14 +5,6 @@ import { TextField } from '../TextField';
 import styles from './Formulario.module.css';
 
 export const Formulario = (props) => {
-    const meditations = [
-        'Sleep better',
-        'Reduce stress or anxiety',
-        'Meditation',
-        'Sprituallity',
-        'Something else',
-    ];
-
     const [name, setName] = useState('');
     const [description, setDescription] = useState('');
     const [image, setImage] = useState('');
@@ -57,7 +49,7 @@ export const Formulario = (props) => {
                     label="Meditations"
                     value={meditation}
                     toChanged={value => setMeditation(value)}
-                    itens={meditations} 
+                    itens={props.meditation} 
                     required 
                 />
                 <Button> Criar card </Button>
