@@ -1,17 +1,16 @@
-import { useState } from "react";
-import Banner from "./components/Banner";
-import { Formulario } from "./components/Form";
-import { Meditations } from "./components/Meditations";
+import { useState } from 'react';
+import Banner from './components/Banner';
+import { Formulario } from './components/Form';
+import { Meditations } from './components/Meditations';
+import { TypeMeditation } from './components/TypeMeditation';
 
 export const App = () => {
   const meditations = [
     { id: 1, name: "Sleep better" },
     { id: 2, name: "Reduce stress or anxiety" },
-    { id: 3, name: "Increase focus" },
-    { id: 4, name: "Improve relationships" },
-    { id: 5, name: "Increase self-awareness" },
-    { id: 6, name: "Increase happiness" },
-    { id: 7, name: "Increase creativity" },
+    { id: 3, name: "Meditation" },
+    { id: 4, name: "Spirituality" },
+    { id: 5, name: "Something else" }
   ];
 
   const [newTypeMeditation, setNewTypeMeditation] = useState([]);
@@ -32,6 +31,7 @@ export const App = () => {
       <Meditations
         meditation={meditations.map((meditation) => meditation.name)}
       />
+      <TypeMeditation />
     </div>
   );
 };

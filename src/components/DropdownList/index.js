@@ -9,11 +9,9 @@ export const DropdownList = (props) => {
         onChange={(evento) => props.toChanged(evento.target.value)}
         required={props.required}
       >
-        {props.itens && props.itens.length > 0 ? (
-          props.itens.map((item) => <option key={item}>{item}</option>)
-        ) : (
-          <option disabled>Nenhum item disponível</option>
-        )}
+        {props.itens &&
+          props.itens.length > 0 &&
+          props.itens.map((item) => <option key={item}>{item}</option>)}
       </select>
     </div>
   );
