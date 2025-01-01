@@ -18,7 +18,7 @@ export const Formulario = (props) => {
       name,
       description,
       image,
-      group: meditation, // Use o campo correto
+      group: meditation,
     });
 
     // Limpa os campos após o envio
