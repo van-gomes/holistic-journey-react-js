@@ -1,37 +1,50 @@
-import { useState } from 'react';
-import Banner from './components/Banner';
-import { Formulario } from './components/Form';
-import { Meditations } from './components/Meditations';
-import { TypeMeditation } from './components/TypeMeditation';
+import { useState } from "react";
+import Banner from "./components/Banner";
+import { Formulario } from "./components/Form";
+import { MeditationGroup } from "./components/MeditationGroup";
 
 export const App = () => {
-  const meditations = [
-    { id: 1, name: "Sleep better" },
-    { id: 2, name: "Reduce stress or anxiety" },
-    { id: 3, name: "Meditation" },
-    { id: 4, name: "Spirituality" },
-    { id: 5, name: "Something else" }
+  const meditationGroups = [
+    { nome: "Relaxamento", corPrimaria: "#57C278", corSecundaria: "#D9F7E9" },
+    {
+      nome: "Foco e Produtividade",
+      corPrimaria: "#82CFFA",
+      corSecundaria: "#E8F8FF",
+    },
+    {
+      nome: "Espiritualidade",
+      corPrimaria: "#A6D157",
+      corSecundaria: "#F0F8E2",
+    },
   ];
 
-  const [newTypeMeditation, setNewTypeMeditation] = useState([]);
+  const [meditations, setMeditations] = useState([]);
 
-  const toNewTypeMeditationRegistered = (newMeditation) => {
-    setNewTypeMeditation([...newTypeMeditation, newMeditation]);
+  const onNewMeditationAdded = (meditation) => {
+    setMeditations([...meditations, meditation]);
   };
 
   return (
-    <div className="app">
+    <div className="App">
       <Banner />
       <Formulario
-        meditation={meditations.map((meditation) => meditation.name)}
-        toRegisteredMeditation={(newMeditation) =>
-          toNewTypeMeditationRegistered(newMeditation)
+        groups={meditationGroups.map((group) => group.nome)}
+        onMeditationRegistered={(meditation) =>
+          onNewMeditationAdded(meditation)
         }
       />
-      <Meditations
-        meditation={meditations.map((meditation) => meditation.name)}
-      />
-      <TypeMeditation />
+
+      {meditationGroups.map((group) => (
+        <MeditationGroup
+          key={group.nome}
+          nome={group.nome}
+          corPrimaria={group.corPrimaria}
+          corSecundaria={group.corSecundaria}
+          meditations={meditations.filter(
+            (meditation) => meditation.group === group.nome
+          )}
+        />
+      ))}
     </div>
   );
 };
