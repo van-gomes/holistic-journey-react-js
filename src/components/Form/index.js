@@ -1,8 +1,8 @@
-import { useState } from "react";
-import { Button } from "../Button";
-import { DropdownList } from "../DropdownList";
-import { TextField } from "../TextField";
-import styles from "./Formulario.module.css";
+import { useState } from 'react';
+import { Button } from '../Button';
+import { DropdownList } from '../DropdownList';
+import { TextField } from '../TextField';
+import styles from './Formulario.module.css';
 
 export const Formulario = (props) => {
   const [name, setName] = useState("");
@@ -13,7 +13,6 @@ export const Formulario = (props) => {
   const onSave = (evento) => {
     evento.preventDefault();
 
-    // Envia os dados para o estado pai
     props.onMeditationRegistered({
       name,
       description,
@@ -21,7 +20,6 @@ export const Formulario = (props) => {
       group: meditation,
     });
 
-    // Limpa os campos após o envio
     setName("");
     setDescription("");
     setImage("");
@@ -60,7 +58,7 @@ export const Formulario = (props) => {
           itens={props.groups}
           required
         />
-        <Button> Criar card </Button>
+        <Button> Cadastrar meditação </Button>
       </form>
     </section>
   );

@@ -1,13 +1,15 @@
 import styles from './MeditationCard.module.css';
 
-export const MeditationCard = ({ name, image, description, backgroundColor }) => {
+export const MeditationCard = ({
+  name,
+  image,
+  description,
+  backgroundColor,
+}) => {
   return (
     <div className="meditation-card">
       <div className="header" style={{ backgroundColor }}>
-        <img
-          src={image || "default-image-path.png"}
-          alt={name} 
-        />
+        <img src={image || "default-image-path.png"} alt={name} />
       </div>
       <div className="footer">
         <h4>{name}</h4>
@@ -16,4 +18,3 @@ export const MeditationCard = ({ name, image, description, backgroundColor }) =>
     </div>
   );
 };
-

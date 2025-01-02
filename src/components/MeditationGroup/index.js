@@ -1,9 +1,17 @@
-import { MeditationCard } from "../MeditationCard";
-import styles from "./MeditationGroup.module.css";
+import { MeditationCard } from '../MeditationCard';
+import styles from './MeditationGroup.module.css';
 
-export const MeditationGroup = ({ nome, corPrimaria, corSecundaria, meditations }) => {
+export const MeditationGroup = ({
+  nome,
+  corPrimaria,
+  corSecundaria,
+  meditations,
+}) => {
   return meditations.length > 0 ? (
-    <section className="meditation-group" style={{ backgroundColor: corSecundaria }}>
+    <section
+      className="meditation-group"
+      style={{ backgroundColor: corSecundaria }}
+    >
       <h3 style={{ borderColor: corPrimaria }}>{nome}</h3>
       <div className="meditations">
         {meditations.map((meditation, index) => (

@@ -5,7 +5,11 @@ import { MeditationGroup } from "./components/MeditationGroup";
 
 export const App = () => {
   const meditationGroups = [
-    { nome: "Relaxamento", corPrimaria: "#57C278", corSecundaria: "#D9F7E9" },
+    { 
+      nome: "Relaxamento",
+      corPrimaria: "#57C278",
+      corSecundaria: "#D9F7E9"
+     },
     {
       nome: "Foco e Produtividade",
       corPrimaria: "#82CFFA",
