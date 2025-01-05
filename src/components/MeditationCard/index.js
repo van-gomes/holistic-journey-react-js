@@ -7,11 +7,11 @@ export const MeditationCard = ({
   backgroundColor,
 }) => {
   return (
-    <div className="meditation-card">
-      <div className="header" style={{ backgroundColor }}>
+    <div className={styles.meditation_card}>
+      <div className={styles.header} style={{ backgroundColor }}>
         <img src={image || "default-image-path.png"} alt={name} />
       </div>
-      <div className="footer">
+      <div className={styles.footer}>
         <h4>{name}</h4>
         <p>{description}</p>
       </div>

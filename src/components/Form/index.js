@@ -19,7 +19,7 @@ export const Formulario = (props) => {
       image,
       group: meditation,
     });
-
+  
     setName("");
     setDescription("");
     setImage("");

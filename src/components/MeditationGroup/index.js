@@ -9,11 +9,11 @@ export const MeditationGroup = ({
 }) => {
   return meditations.length > 0 ? (
     <section
-      className="meditation-group"
+      className={styles.meditation_group}
       style={{ backgroundColor: corSecundaria }}
     >
       <h3 style={{ borderColor: corPrimaria }}>{nome}</h3>
-      <div className="meditations">
+      <div className={styles.meditation_group_card}>
         {meditations.map((meditation, index) => (
           <MeditationCard
             key={index}

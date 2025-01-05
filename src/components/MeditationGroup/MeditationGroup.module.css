@@ -1,6 +1,6 @@
-.medidation {
-    text-align: center;
-    padding: 32px;
+.medidation_group {
+   display: flex;
+   justify-content: space-around;
 }
 
 .medidation__title {
