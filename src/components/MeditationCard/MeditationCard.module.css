@@ -1,5 +1,7 @@
 .meditation_card {
     width: 280px;
+    margin-top: 5rem;
+    text-align: center;
 }
 
 .meditation_card .header {
