@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Banner from "./components/Banner";
 import { Formulario } from "./components/Form";
-import { MeditationGroup } from "./components/MeditationGroup";
+import { Instructor } from "./components/Instructor";
 
 export const App = () => {
   const meditationGroups = [
@@ -9,7 +9,7 @@ export const App = () => {
       nome: "Relaxamento",
       corPrimaria: "#57C278",
       corSecundaria: "#D9F7E9"
-     },
+    },
     {
       nome: "Foco e Produtividade",
       corPrimaria: "#82CFFA",
@@ -25,7 +25,7 @@ export const App = () => {
   const [meditations, setMeditations] = useState([]);
 
   const onNewMeditationAdded = (meditation) => {
-    setMeditations([...meditations, meditation]);
+    setMeditations((prevMeditations) => [...prevMeditations, meditation]);
   };
 
   return (
@@ -33,22 +33,25 @@ export const App = () => {
       <Banner />
       <Formulario
         groups={meditationGroups.map((group) => group.nome)}
-        onMeditationRegistered={(meditation) =>
-          onNewMeditationAdded(meditation)
-        }
+        onMeditationRegistered={onNewMeditationAdded}
       />
 
-      {meditationGroups.map((group) => (
-        <MeditationGroup
-          key={group.nome}
-          nome={group.nome}
-          corPrimaria={group.corPrimaria}
-          corSecundaria={group.corSecundaria}
-          meditations={meditations.filter(
-            (meditation) => meditation.group === group.nome
-          )}
-        />
-      ))}
+      {meditationGroups.map((group) => {
+        const filteredMeditations = meditations.filter(
+          (meditation) => meditation.group === group.nome
+        );
+
+        return (
+          <Instructor
+            key={group.nome}
+            nome={group.nome}
+            corPrimaria={group.corPrimaria}
+            corSecundaria={group.corSecundaria}
+            imagem={group.imagem}
+            meditations={filteredMeditations}
+          />
+        );
+      })}
     </div>
   );
 };
