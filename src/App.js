@@ -46,8 +46,10 @@ export const App = () => {
         groups={meditationGroups.map((group) => group.category)}
         onMeditationRegistered={onNewMeditationAdded}
       />
-      <div className={styles.video_app}>
-        {meditationGroups.map((content) => (
+     <div className={styles.meditation}>
+      {meditationGroups
+        .filter((group) => meditations.some((med) => med.group === group.category))
+        .map((content) => (
           <MeditationCard key={content.id} content={content} />
         ))}
       </div>
