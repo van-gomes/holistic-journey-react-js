@@ -1,20 +1,22 @@
-import { MeditationCard } from "../MeditationCard";
 import styles from "./Instructor.module.css";
 
 export const Instructor = ({
   nome,
   corPrimaria,
   corSecundaria,
-  meditations,
   imagem,
+  description,
 }) => {
-  return meditations.length > 0 ? (
+  return (
     <div className={styles.container_instructor}>
       <section
         className={styles.instructor}
-        style={{ "--borderColor": corPrimaria || "#FFFFFF" }}
+        style={{
+          "--borderColor": corPrimaria,
+          backgroundColor: corSecundaria,
+        }}
       >
-        <div className={styles.container_image}>
+        <div className={styles.container_media}>
           {imagem ? (
             <img
               src={imagem}
@@ -26,12 +28,8 @@ export const Instructor = ({
           )}
         </div>
         <h3 style={{ borderColor: corPrimaria }}>{nome}</h3>
-        <div className={styles.meditation_group_card}>
-          {meditations.map((meditation, index) => (
-            <MeditationCard key={index} meditation={meditation} />
-          ))}
-        </div>
+        <p>{description}</p>
       </section>
     </div>
-  ) : null;
+  );
 };
