@@ -46,13 +46,13 @@ export const App = () => {
         groups={meditationGroups.map((group) => group.category)}
         onMeditationRegistered={onNewMeditationAdded}
       />
-     {/* <div className={styles.meditation}>
+     <div className={styles.meditation}>
       {meditationGroups
         .filter((group) => meditations.some((med) => med.group === group.category))
         .map((content) => (
           <MeditationCard key={content.id} content={content} />
         ))}
-      </div> */}
+      </div>
     </div>
   );
 };

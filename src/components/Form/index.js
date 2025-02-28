@@ -14,7 +14,6 @@ export const Formulario = ({ onInstructorResgistred }) => {
     "Instructor 1",
     "Instructor 2",
     "Instructor 3"
-
   ]
 
   const onSave = (evento) => {
