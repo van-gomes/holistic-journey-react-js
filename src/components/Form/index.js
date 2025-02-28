@@ -4,16 +4,23 @@ import { DropdownList } from '../DropdownList';
 import { TextField } from '../TextField';
 import styles from './Formulario.module.css';
 
-export const Formulario = (props) => {
+export const Formulario = ({ onInstructorResgistred }) => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState("");
   const [meditation, setMeditation] = useState("");
 
+  const instructors = [
+    "Instructor 1",
+    "Instructor 2",
+    "Instructor 3"
+
+  ]
+
   const onSave = (evento) => {
     evento.preventDefault();
 
-    props.onMeditationRegistered({
+    onInstructorResgistred({
       name,
       description,
       image,
@@ -52,10 +59,10 @@ export const Formulario = (props) => {
           required
         />
         <DropdownList
-          label="Meditations"
+          label="Instructors"
           value={meditation}
           toChanged={(value) => setMeditation(value)}
-          itens={props.groups}
+          itens={instructors}
           required
         />
         <Button> Cadastrar meditação </Button>
