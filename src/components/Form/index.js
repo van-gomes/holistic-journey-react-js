@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import { Button } from '../Button';
-import { DropdownList } from '../DropdownList';
-import { TextField } from '../TextField';
-import styles from './Formulario.module.css';
+import { useState } from "react";
+import { Button } from "../Button";
+import { DropdownList } from "../DropdownList";
+import { TextField } from "../TextField";
+import styles from "./Formulario.module.css";
 
 export const Formulario = ({ onInstructorRegistred }) => {
   const [name, setName] = useState("");
@@ -10,20 +10,16 @@ export const Formulario = ({ onInstructorRegistred }) => {
   const [image, setImage] = useState("");
   const [instructors, setInstructors] = useState("");
 
-  const instructor = [
-    "Instructor 1",
-    "Instructor 2",
-    "Instructor 3"
-  ]
+  const instructor = ["Instructor 1", "Instructor 2", "Instructor 3"];
 
   const onSave = (evento) => {
     evento.preventDefault();
 
-   onInstructorRegistred({
+    onInstructorRegistred({
       name,
       description,
       image,
-      instructors
+      instructors,
     });
   };
 
@@ -58,8 +54,9 @@ export const Formulario = ({ onInstructorRegistred }) => {
           toChanged={(value) => {
             console.log("Novo valor selecionado:", value);
             setInstructors(value);
-          }}          
+          }}
           itens={instructor}
+          placeholder="Selecione um instrutor"
           required
         />
         <Button> Cadastrar meditação </Button>
