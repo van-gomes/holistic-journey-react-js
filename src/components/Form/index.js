@@ -4,13 +4,13 @@ import { DropdownList } from '../DropdownList';
 import { TextField } from '../TextField';
 import styles from './Formulario.module.css';
 
-export const Formulario = ({ onInstructorResgistred }) => {
+export const Formulario = ({ onInstructorRegistred }) => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState("");
-  const [meditation, setMeditation] = useState("");
+  const [instructors, setInstructors] = useState("");
 
-  const instructors = [
+  const instructor = [
     "Instructor 1",
     "Instructor 2",
     "Instructor 3"
@@ -19,17 +19,12 @@ export const Formulario = ({ onInstructorResgistred }) => {
   const onSave = (evento) => {
     evento.preventDefault();
 
-    onInstructorResgistred({
+   onInstructorRegistred({
       name,
       description,
       image,
-      group: meditation,
+      instructors
     });
-  
-    setName("");
-    setDescription("");
-    setImage("");
-    setMeditation("");
   };
 
   return (
@@ -59,9 +54,12 @@ export const Formulario = ({ onInstructorResgistred }) => {
         />
         <DropdownList
           label="Instructors"
-          value={meditation}
-          toChanged={(value) => setMeditation(value)}
-          itens={instructors}
+          value={instructors}
+          toChanged={(value) => {
+            console.log("Novo valor selecionado:", value);
+            setInstructors(value);
+          }}          
+          itens={instructor}
           required
         />
         <Button> Cadastrar meditação </Button>

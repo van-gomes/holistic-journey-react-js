@@ -1,17 +1,17 @@
-import styles from './DropdownList.module.css';
+import styles from "./DropdownList.module.css";
 
-export const DropdownList = (props) => {
+export const DropdownList = ({ label, itens, value, required, toChanged }) => {
   return (
     <div className={styles.lista_suspensa}>
-      <label>{props.label}</label>
+      <label>{label}</label>
       <select
-        value={props.value}
-        onChange={(evento) => props.toChanged(evento.target.value)}
-        required={props.required}
+        value={value}
+        onChange={(evento) => toChanged(value)}
+        required={required}
       >
-        {props.itens &&
-          props.itens.length > 0 &&
-          props.itens.map((item) => <option key={item}>{item}</option>)}
+        {itens &&
+          itens.length > 0 &&
+          itens.map((item) => <option value={item} key={item}>{item}</option>)}
       </select>
     </div>
   );

@@ -6,53 +6,26 @@ import styles from "./App.module.css";
 import { MeditationCard } from "./components/MeditationCard";
 
 export const App = () => {
-  const meditationGroups = [
-    {
-      id: 1,
-      category: "Relaxamento",
-      imagem: "https://source.unsplash.com/300x300/?relax",
-      description: "Meditações para relaxar.",
-      colorBorder: "#57C278",
-      corSecundaria: "#D9F7E9",
-    },
-    {
-      id: 2,
-      category: "Foco e Produtividade",
-      imagem: "https://source.unsplash.com/300x300/?focus",
-      description: "Meditações para melhorar o foco.",
-      colorBorder: "#82CFFA",
-      corSecundaria: "#E8F8FF",
-    },
-    {
-      id: 3,
-      category: "Espiritualidade",
-      imagem: "https://source.unsplash.com/300x300/?spirituality",
-      description: "Meditações para espiritualidade.",
-      colorBorder: "#A6D157",
-      corSecundaria: "#F0F8E2",
-    },
-  ];
+  const [instructors, setInstructors] = useState([]);
 
-  const [meditations, setMeditations] = useState([]);
-
-  const onNewMeditationAdded = (meditation) => {
-    setMeditations((prevMeditations) => [...prevMeditations, meditation]);
+  const onNewInstructorAdded = (instructor) => {
+    //setInstructors((preInstructor) => [...preInstructor, instructors]);
+    console.log(instructor);
   };
 
   return (
     <div className="App">
       <Banner />
       <Formulario
-        groups={meditationGroups.map((group) => group.category)}
-        onMeditationRegistered={onNewMeditationAdded}
+        onInstructorRegistred={instructor => onNewInstructorAdded(instructor)}
       />
-     <div className={styles.meditation}>
+     {/* <div className={styles.meditation}>
       {meditationGroups
         .filter((group) => meditations.some((med) => med.group === group.category))
         .map((content) => (
           <MeditationCard key={content.id} content={content} />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };
