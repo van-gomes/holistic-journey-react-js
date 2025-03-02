@@ -9,7 +9,7 @@ export const App = () => {
   const [instructors, setInstructors] = useState([]);
 
   const onNewInstructorAdded = (instructor) => {
-    //setInstructors((preInstructor) => [...preInstructor, instructors]);
+    setInstructors([...instructors, instructor]);
     console.log(instructor);
   };
 
