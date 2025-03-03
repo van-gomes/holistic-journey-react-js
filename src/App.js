@@ -63,6 +63,7 @@ export const App = () => {
           name={meditation.name}
           primaryColor={meditation.primaryColor}
           secondaryColor={meditation.secondaryColor}
+          instructors={instructors}
         />
       ))}
     </div>

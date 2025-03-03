@@ -1,14 +1,14 @@
 import styles from "./Instructor.module.css";
 
-export const Instructor = () => {
+export const Instructor = ({name, description, image}) => {
     return (
         <div className={styles.instructor}>
             <div className={styles.cabecalho}>
-                <img src='https://github.com/viniciosneves.png' alt='Vinicios Neves'/>
+                <img src={image} alt={name}/>
             </div>
             <div className={styles.rodape}>
-                <h4>Vinicios Neves</h4>
-                <h5>Instrutor</h5>
+                <h4>{name}</h4>
+                <h5>{description}</h5>
             </div>
         </div>
     );
