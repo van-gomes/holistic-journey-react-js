@@ -8,6 +8,7 @@ export const Meditation= (props) => {
       <h3 style={{borderColor: props.primaryColor}}>
         {props.name}
       </h3>
+      <Instructor />
     </section>
   );
 };
