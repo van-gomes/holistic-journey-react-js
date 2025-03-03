@@ -54,6 +54,7 @@ export const App = () => {
     <div className="App">
       <Banner />
       <Formulario
+        meditations={meditations.map(meditation => meditation.name)}
         onInstructorRegistred={(instructor) => onNewInstructorAdded(instructor)}
       />
       {meditations.map((meditation) => (

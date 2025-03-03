@@ -4,13 +4,11 @@ import { DropdownList } from "../DropdownList";
 import { TextField } from "../TextField";
 import styles from "./Formulario.module.css";
 
-export const Formulario = ({ onInstructorRegistred }) => {
+export const Formulario = ({ onInstructorRegistred, meditations }) => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState("");
-  const [instructors, setInstructors] = useState("");
-
-  const instructor = ["Instructor 1", "Instructor 2", "Instructor 3"];
+  const [selectedMeditation, setSelectedMeditation] = useState("");
 
   const onSave = (evento) => {
     evento.preventDefault();
@@ -19,7 +17,7 @@ export const Formulario = ({ onInstructorRegistred }) => {
       name,
       description,
       image,
-      instructors,
+      selectedMeditation
     });
   };
 
@@ -30,36 +28,33 @@ export const Formulario = ({ onInstructorRegistred }) => {
         <TextField
           label="Nome"
           value={name}
-          toChanged={(value) => setName(value)}
+          toChanged={setName}
           placeholder="Digite seu nome"
           required
         />
         <TextField
           label="Descrição"
           value={description}
-          toChanged={(value) => setDescription(value)}
+          toChanged={setDescription}
           placeholder="Digite seu cargo"
           required
         />
         <TextField
           label="Imagem"
           value={image}
-          toChanged={(value) => setImage(value)}
+          toChanged={setImage}
           placeholder="Digite o endereço da imagem"
           required
         />
         <DropdownList
-          label="Instructors"
-          value={instructors}
-          toChanged={(value) => {
-            console.log("Novo valor selecionado:", value);
-            setInstructors(value);
-          }}
-          itens={instructor}
-          placeholder="Selecione um instrutor"
+          label="Meditação"
+          value={selectedMeditation}
+          toChanged={setSelectedMeditation}
+          itens={meditations}
+          placeholder="Selecione uma meditação"
           required
         />
-        <Button> Cadastrar meditação </Button>
+        <Button>Cadastrar meditação</Button>
       </form>
     </section>
   );
