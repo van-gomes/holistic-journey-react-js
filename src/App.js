@@ -63,7 +63,7 @@ export const App = () => {
           name={meditation.name}
           primaryColor={meditation.primaryColor}
           secondaryColor={meditation.secondaryColor}
-          instructors={instructors}
+          instructors={instructors.filter(instructor => instructor.meditation === meditation.name)}
         />
       ))}
     </div>
