@@ -8,7 +8,6 @@ export const App = () => {
   const meditations = [
     {
       name: "Mindfulness Meditation",
-      nameInstructor: "Vania",
       primaryColor: "#57C278",
       secondaryColor: "#D9F7E9",
     },
@@ -26,25 +25,21 @@ export const App = () => {
     },
     {
       name: "Zen Meditation",
-      nameInstructor: "Vania",
       primaryColor: "#E06B69",
       secondaryColor: "#FDE7E8",
     },
     {
       name: "Vipassana Meditation",
-      nameInstructor: "Vania",
       primaryColor: "#DB6EBF",
       secondaryColor: "#FAE9F5",
     },
     {
       name: "Metta Meditation",
-      nameInstructor: "Vania",
       primaryColor: "#FFBA05",
       secondaryColor: "#FFF5D9",
     },
     {
       name: "Chakra Meditation",
-      nameInstructor: "Vania",
       primaryColor: "#FF8A29",
       secondaryColor: "#FFEEDF",
     },
@@ -65,9 +60,9 @@ export const App = () => {
         onInstructorRegistred={(instructor) => onNewInstructorAdded(instructor)}
       />
       
-      {meditations.map((meditation) => (
+      {meditations.map((meditation, key) => (
         <Meditation
-          key={meditation.name}
+          key={key}
           name={meditation.name}
           nameInstructor={meditation.nameInstructor}
           primaryColor={meditation.primaryColor}
