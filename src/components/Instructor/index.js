@@ -1,6 +1,6 @@
 import styles from "./Instructor.module.css";
 
-export const Instructor = ({name, description, image}) => {
+export const Instructor = ({name, description, image }) => {
     return (
         <div className={styles.instructor}>
             <div className={styles.cabecalho}>
