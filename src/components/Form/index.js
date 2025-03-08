@@ -17,8 +17,8 @@ export const Formulario = ({ onInstructorRegistred, meditations }) => {
       name,
       description,
       image,
-      selectedMeditation
-    });
+      instructorName: selectedMeditation
+    });    
   };
 
   return (
