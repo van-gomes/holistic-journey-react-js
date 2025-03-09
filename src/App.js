@@ -15,38 +15,32 @@ export const App = () => {
     {
       meditationName:"Transcendental Meditation",
       instructorName: "Vania",
-      nameInstructor: "Vania",
       primaryColor: "#82CFFA",
       secondaryColor: "#E8F8FF",
     },
     {
       meditationName:"Guided Meditation",
       instructorName: "Vania",
-      nameInstructor: "Vania",
       primaryColor: "#A6D157",
       secondaryColor: "#F0F8E2",
     },
     {
       meditationName:"Zen Meditation",
-      nameInstructor: "Vania",
       primaryColor: "#E06B69",
       secondaryColor: "#FDE7E8",
     },
     {
       meditationName:"Vipassana Meditation",
-      nameInstructor: "Vania",
       primaryColor: "#DB6EBF",
       secondaryColor: "#FAE9F5",
     },
     {
       meditationName:"Metta Meditation",
-      nameInstructor: "Vania",
       primaryColor: "#FFBA05",
       secondaryColor: "#FFF5D9",
     },
     {
       meditationName:"Chakra Meditation",
-      nameInstructor: "Vania",
       primaryColor: "#FF8A29",
       secondaryColor: "#FFEEDF",
     },
@@ -74,7 +68,7 @@ export const App = () => {
           primaryColor={meditation.primaryColor}
           secondaryColor={meditation.secondaryColor}
           instructors={instructors.filter(instructor =>
-            instructor.instructorName === meditation.meditationName)
+            instructor.selectedMeditation === meditation.meditationName)
           }
         />
       ))}
