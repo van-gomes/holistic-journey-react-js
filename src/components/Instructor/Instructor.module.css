@@ -2,7 +2,7 @@
   width: 280px;
 }
 
-.instructor .cabecalho {
+.instructor .header {
   background-color: #f0f0f0;
   border-radius: 10px 10px 0px 0px;
 }
@@ -14,7 +14,7 @@
   bottom: -50px;
 }
 
-.instructor .rodape {
+.instructor .footer {
   background: #ffffff;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
   border-radius: 0px 0px 10px 10px;
@@ -22,7 +22,7 @@
   padding-bottom: 40px;
 }
 
-.instructor .rodape h4 {
+.instructor .footer h4 {
   color: #6278f7;
   font-size: 18px;
   line-height: 22px;
@@ -30,7 +30,7 @@
   margin-bottom: 8px;
 }
 
-.instructor .rodape h5 {
+.instructor .footer h5 {
   font-size: 18px;
   line-height: 22px;
   color: #212121;

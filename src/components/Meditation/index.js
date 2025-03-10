@@ -1,5 +1,5 @@
-import { Instructor } from "../Instructor";
-import styles from "./Meditation.module.css";
+import { Instructor } from '../Instructor';
+import styles from './Meditation.module.css';
 
 export const Meditation = (props) => {
   return (

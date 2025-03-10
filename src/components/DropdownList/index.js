@@ -1,4 +1,4 @@
-import styles from "./DropdownList.module.css";
+import styles from './DropdownList.module.css';
 
 export const DropdownList = ({
   label,
@@ -13,7 +13,7 @@ export const DropdownList = ({
       <label>{label}</label>
       <select
         value={value}
-        onChange={(evento) => toChanged(evento.target.value)}
+        onChange={(event) => toChanged(event.target.value)}
         required={required}
       >
         <option value="">{placeholder}</option>

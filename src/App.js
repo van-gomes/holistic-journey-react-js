@@ -1,8 +1,7 @@
-import { useState } from "react";
-import Banner from "./components/Banner";
-import { Formulario } from "./components/Form";
-import styles from "./App.module.css";
-import { Meditation } from "./components/Meditation";
+import { useState } from 'react';
+import Banner from './components/Banner';
+import { Formulario } from './components/Form';
+import { Meditation } from './components/Meditation';
 
 export const App = () => {
   const meditations = [
