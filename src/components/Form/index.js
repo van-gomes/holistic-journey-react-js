@@ -18,7 +18,12 @@ export const Formulario = ({ onInstructorRegistred, meditations }) => {
       description,
       image,
       selectedMeditation
-    });    
+    });
+    
+    setName("");
+    setDescription("");
+    setImage("");
+    setSelectedMeditation("");
   };
 
   return (
