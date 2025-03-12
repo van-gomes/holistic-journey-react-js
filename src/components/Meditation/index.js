@@ -3,7 +3,7 @@ import styles from './Meditation.module.css';
 
 export const Meditation = (props) => {
   return (
-    <section
+    (props.instructors.length > 0) ? <section
       className={styles.meditation}
       style={{ backgroundColor: props.secondaryColor }}
     >
@@ -16,5 +16,6 @@ export const Meditation = (props) => {
         />
       ))}
     </section>
+    : ""
   );
 };
