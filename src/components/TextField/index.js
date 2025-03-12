@@ -11,6 +11,7 @@ export const TextField = (props) => {
     <div className={styles.field_text}>
       <label>{props.label}</label>
       <input
+        value={props.value}
         onChange={toTyped}
         placeholder={modifiedPlaceholder}
         required={props.required}

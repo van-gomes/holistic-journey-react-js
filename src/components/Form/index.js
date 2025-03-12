@@ -20,10 +20,10 @@ export const Formulario = ({ onInstructorRegistred, meditations }) => {
       selectedMeditation
     });
     
-    setName("");
-    setDescription("");
-    setImage("");
-    setSelectedMeditation("");
+    setName('');
+    setDescription('');
+    setImage('');
+    setSelectedMeditation('');
   };
 
   return (
@@ -33,28 +33,28 @@ export const Formulario = ({ onInstructorRegistred, meditations }) => {
         <TextField
           label="Nome"
           value={name}
-          toChanged={setName}
+          toChanged={value => setName(value)}
           placeholder="Digite seu nome"
           required
         />
         <TextField
           label="Descrição"
           value={description}
-          toChanged={setDescription}
+          toChanged={value => setDescription(value)}
           placeholder="Digite seu cargo"
           required
         />
         <TextField
           label="Imagem"
           value={image}
-          toChanged={setImage}
+          toChanged={value => setImage(value)}
           placeholder="Digite o endereço da imagem"
           required
         />
         <DropdownList
           label="Meditação"
           value={selectedMeditation}
-          toChanged={setSelectedMeditation}
+          toChanged={value => setSelectedMeditation(value)}
           itens={meditations}
           placeholder="Selecione uma meditação"
           required
