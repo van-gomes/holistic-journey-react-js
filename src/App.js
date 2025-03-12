@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Banner from './components/Banner';
 import { Formulario } from './components/Form';
 import { Meditation } from './components/Meditation';
+import { Footer } from './components/Footer';
 
 export const App = () => {
   const meditations = [
@@ -62,7 +63,7 @@ export const App = () => {
       
       {meditations.map((meditation, key) => (
         <Meditation
-          key={key}
+          key={meditation.meditationName}
           name={meditation.meditationName}
           primaryColor={meditation.primaryColor}
           secondaryColor={meditation.secondaryColor}
@@ -71,6 +72,8 @@ export const App = () => {
           }
         />
       ))}
+
+      <Footer />
     </div>
   );
 };
