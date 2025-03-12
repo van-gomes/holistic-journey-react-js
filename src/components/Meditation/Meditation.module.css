@@ -1,18 +1,17 @@
 .meditation {
     text-align: center;
     padding: 32px;
+    background-blend-mode: multiply;
 }
 
 .meditation h3 {
     font-size: 32px;
-    border-radius: 4px solid;
+    font-family: 'Prata';
+    border-bottom: 4px solid;
     display: inline-block;
     padding-bottom: 8px;
 }
 
 .meditation .instructors {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    flex-wrap: 32px;
+    margin-top: 32px;
 }

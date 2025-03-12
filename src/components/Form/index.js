@@ -27,8 +27,8 @@ export const Formulario = ({ onInstructorRegistred, meditations }) => {
   };
 
   return (
-    <section className={styles.formulario}>
-      <form onSubmit={onSave}>
+    <section className={styles.form_container}>
+      <form className={styles.form} onSubmit={onSave}>
         <h2>Preencha os dados para criar o card do colaborador</h2>
         <TextField
           label="Nome"

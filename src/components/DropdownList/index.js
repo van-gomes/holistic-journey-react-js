@@ -9,7 +9,7 @@ export const DropdownList = ({
   placeholder,
 }) => {
   return (
-    <div className={styles.lista_suspensa}>
+    <div className={styles.dropdown_List}>
       <label>{label}</label>
       <select
         value={value}

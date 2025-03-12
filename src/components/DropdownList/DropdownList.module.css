@@ -1,10 +1,14 @@
-.lista_suspensa label {
+.dropdown_List {
+    margin: 24px 0;
+}
+
+.dropdown_List label {
     display: block;
     margin-bottom: 8px;
     font-size: 24px;
 }
 
-.lista_suspensa select {
+.dropdown_List select {
     background-color: #FFF;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
     width: 100%;
