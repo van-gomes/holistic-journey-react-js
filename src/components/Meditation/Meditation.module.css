@@ -13,5 +13,9 @@
 }
 
 .meditation .instructors {
+    display: flex;
+    justify-content: flex-start;
     margin-top: 32px;
+    flex-wrap: wrap;
+    gap: 45px;
 }

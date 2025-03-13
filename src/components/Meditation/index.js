@@ -8,15 +8,17 @@ export const Meditation = (props) => {
       style={{ backgroundColor: props.secondaryColor }}
     >
       <h3 style={{ borderColor: props.primaryColor }}>{props.name}</h3>
-      {props.instructors.map((instructor) => (
-        <div className={styles.instructors}>
+
+      <div className={styles.instructors}>
+        {props.instructors.map((instructor) => (
           <Instructor
             name={instructor.name}
             description={instructor.description}
             image={instructor.image}
+            primaryColor={props.primaryColor}
           />
-        </div>
-      ))}
+        ))}
+      </div>
     </section>
   ) : (
     ""

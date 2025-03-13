@@ -54,7 +54,7 @@ export const App = () => {
   };
 
   return (
-    <div className="App">
+    <div>
       <Banner />
       <Formulario
         meditations={meditations.map(meditation => meditation.meditationName)}

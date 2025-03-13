@@ -1,9 +1,9 @@
 import styles from './Instructor.module.css';
 
-export const Instructor = ({name, description, image }) => {
+export const Instructor = ({name, description, image, primaryColor }) => {
     return (
         <div className={styles.instructor}>
-            <div className={styles.header}>
+            <div className={styles.header} style={{ backgroundColor: primaryColor }}>
                 <img src={image} alt={name}/>
             </div>
             <div className={styles.footer}>
