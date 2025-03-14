@@ -1,10 +1,10 @@
-import { useState } from 'react';
-import { Button } from '../Button';
-import { DropdownList } from '../DropdownList';
-import { TextField } from '../TextField';
-import styles from './Formulario.module.css';
+import { useState } from "react";
+import { Button } from "../Button";
+import { DropdownList } from "../DropdownList";
+import { TextField } from "../TextField";
+import styles from "./Formulario.module.css";
 
-export const Formulario = ({ onInstructorRegistred, meditations }) => {
+export const Formulario = (props) => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState("");
@@ -13,17 +13,17 @@ export const Formulario = ({ onInstructorRegistred, meditations }) => {
   const onSave = (evento) => {
     evento.preventDefault();
 
-    onInstructorRegistred({
+    props.onInstructorRegistred({
       name,
       description,
       image,
-      selectedMeditation
+      selectedMeditation,
     });
-    
-    setName('');
-    setDescription('');
-    setImage('');
-    setSelectedMeditation('');
+
+    setName("");
+    setDescription("");
+    setImage("");
+    setSelectedMeditation("");
   };
 
   return (
@@ -33,29 +33,29 @@ export const Formulario = ({ onInstructorRegistred, meditations }) => {
         <TextField
           label="Nome"
           value={name}
-          toChanged={value => setName(value)}
+          toChanged={(value) => setName(value)}
           placeholder="Digite seu nome"
           required
         />
         <TextField
           label="Descrição"
           value={description}
-          toChanged={value => setDescription(value)}
+          toChanged={(value) => setDescription(value)}
           placeholder="Digite seu cargo"
           required
         />
         <TextField
           label="Imagem"
           value={image}
-          toChanged={value => setImage(value)}
+          toChanged={(value) => setImage(value)}
           placeholder="Digite o endereço da imagem"
           required
         />
         <DropdownList
           label="Meditação"
           value={selectedMeditation}
-          toChanged={value => setSelectedMeditation(value)}
-          itens={meditations}
+          toChanged={(value) => setSelectedMeditation(value)}
+          itens={props.meditations}
           placeholder="Selecione uma meditação"
           required
         />

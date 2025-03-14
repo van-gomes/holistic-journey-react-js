@@ -1,25 +1,18 @@
-import styles from './DropdownList.module.css';
+import styles from "./DropdownList.module.css";
 
-export const DropdownList = ({
-  label,
-  itens,
-  value,
-  required,
-  toChanged,
-  placeholder,
-}) => {
+export const DropdownList = (props) => {
   return (
     <div className={styles.dropdown_List}>
-      <label>{label}</label>
+      <label>{props.label}</label>
       <select
-        value={value}
-        onChange={(event) => toChanged(event.target.value)}
-        required={required}
+        value={props.value}
+        onChange={(event) => props.toChanged(event.target.value)}
+        required={props.required}
       >
-        <option value="">{placeholder}</option>
-        {itens &&
-          itens.length > 0 &&
-          itens.map((item) => (
+        <option value="">{props.placeholder}</option>
+        {props.itens &&
+          props.itens.length > 0 &&
+          props.itens.map((item) => (
             <option value={item} key={item}>
               {item}
             </option>
