@@ -1,4 +1,4 @@
-import styles from "./Instructor.module.css";
+import styles from './Instructor.module.css';
 
 export const Instructor = (props) => {
   return (

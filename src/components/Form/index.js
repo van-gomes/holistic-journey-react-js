@@ -1,8 +1,8 @@
-import { useState } from "react";
-import { Button } from "../Button";
-import { DropdownList } from "../DropdownList";
-import { TextField } from "../TextField";
-import styles from "./Formulario.module.css";
+import { useState } from 'react';
+import { Button } from '../Button';
+import { DropdownList } from '../DropdownList';
+import { TextField } from '../TextField';
+import styles from './Formulario.module.css';
 
 export const Formulario = (props) => {
   const [name, setName] = useState("");
