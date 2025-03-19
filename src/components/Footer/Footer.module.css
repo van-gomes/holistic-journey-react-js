@@ -1,7 +1,7 @@
 .footer {
   background: #6278f7;
   color: #fff;
-  padding: 20px;
+  padding: 1.25rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9,7 +9,7 @@
 
 .footer ul li {
   display: inline-block;
-  margin-right: 32px;
+  margin-right: 2rem;
 }
 
 .footer ul li:last-child {

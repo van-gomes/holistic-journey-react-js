@@ -1,19 +1,19 @@
 .dropdown_List {
-    margin: 24px 0;
+  margin: 1.5rem 0;
 }
 
 .dropdown_List label {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 24px;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
 }
 
 .dropdown_List select {
-    background-color: #FFF;
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
-    width: 100%;
-    border: none;
-    font-size: 24px;
-    padding: 24px;
-    box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 0.625rem 0.625rem 1.875rem rgba(0, 0, 0, 0.06);
+  width: 100%;
+  border: none;
+  font-size: 1.5rem;
+  padding: 1.5rem;
+  box-sizing: border-box;
 }

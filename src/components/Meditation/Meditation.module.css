@@ -1,21 +1,21 @@
 .meditation {
-    text-align: center;
-    padding: 32px;
-    background-blend-mode: multiply;
+  text-align: center;
+  padding: 2rem;
+  background-blend-mode: multiply;
 }
 
 .meditation h3 {
-    font-size: 32px;
-    font-family: 'Prata';
-    border-bottom: 4px solid;
-    display: inline-block;
-    padding-bottom: 8px;
+  font-size: 2rem;
+  font-family: "Prata";
+  border-bottom: 0.25rem solid;
+  display: inline-block;
+  padding-bottom: 0.5rem;
 }
 
 .meditation .instructors {
-    display: flex;
-    justify-content: center;
-    margin-top: 32px;
-    flex-wrap: wrap;
-    gap: 45px;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  gap: 2.8125rem;
 }
