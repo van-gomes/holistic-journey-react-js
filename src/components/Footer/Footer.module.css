@@ -15,3 +15,12 @@
 .footer ul li:last-child {
   margin-right: 0;
 }
+
+@media (max-width: 468px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
