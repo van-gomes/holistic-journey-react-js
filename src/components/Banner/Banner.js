@@ -1,10 +1,10 @@
 import styles from '../Banner/Banner.module.css';
-import bannerUm from '../../assets/banner-1.jpg';
+import greenBanner from '../../assets/green_banner.jpg';
 
 export const Banner = () => {
   return (
     <div className={styles.banner}>
-      <img src={bannerUm} alt="banner" />
+      <img src={greenBanner} alt="banner" />
     </div>
   );
 };

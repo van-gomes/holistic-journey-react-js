@@ -1,4 +1,4 @@
-import styles from './Footer.module.css';
+import styles from "./Footer.module.css";
 
 export const Footer = () => {
   return (
@@ -24,7 +24,9 @@ export const Footer = () => {
       </section>
       <section>{/* <img src="/imagens/logo.png" alt="" /> */}</section>
       <section>
-        <p>Desenvolvido com amor por Vânia Gomes</p>
+        <p>
+          Desenvolvido com <span className={styles.heart}>&#10084;</span> por Vânia Gomes
+        </p>
       </section>
     </footer>
   );
